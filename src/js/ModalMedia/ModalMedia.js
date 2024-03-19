@@ -1,20 +1,20 @@
 export default class ModalMedia {
-    constructor(container) {
-        if (!(container instanceof HTMLElement)) {
-            throw new Error('container is not HTMLElement');
-        }
-
-        this.container = container;
-        this.init();
+  constructor(container) {
+    if (!(container instanceof HTMLElement)) {
+      throw new Error('container is not HTMLElement');
     }
 
-    init() {
-        this.drawUi();
-        this.events();
-    }
+    this.container = container;
+    this.init();
+  }
 
-    drawUi() {
-        this.container.innerHTML = `
+  init() {
+    this.drawUi();
+    this.events();
+  }
+
+  drawUi() {
+    this.container.innerHTML = `
         <div id="modal" class="modal">
           <div class="modal-content">
             <h4>Что-то пошло не так</h2>
@@ -34,14 +34,14 @@ export default class ModalMedia {
           </div>
         </div>
       `;
-    }
+  }
 
-    events() {
-        const closeButton = document.querySelector('.close-btn');
-        closeButton.addEventListener('click', () => this.closeModal());
-    }
+  events() {
+    const closeButton = document.querySelector('.close-btn');
+    closeButton.addEventListener('click', () => this.closeModal());
+  }
 
-    closeModal() {
-        this.container.innerHTML = '';
-    }
+  closeModal() {
+    this.container.innerHTML = '';
+  }
 }

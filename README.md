@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/beold8o40lcbwmfc?svg=true)](https://ci.appveyor.com/project/Ibragim066/media)
